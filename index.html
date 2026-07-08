@@ -136,7 +136,21 @@ margin-top:20px;
 </footer>
 <script>
 function buyNow(packageName, price) {
-    alert("এই ফিচার পরে যোগ করা হবে");
+    let uid = document.querySelector("input").value;
+
+    if(uid == ""){
+        alert("Please enter your Free Fire UID");
+        return;
+    }
+
+    let number = "8801793642792";
+
+    let message = "🔥 FFBD TOPUP Order\n\n"
++ "UID: " + uid + "\n"
++ "Package: " + packageName + "\n"
++ "Price: ৳" + price;
+
+    window.open("https://wa.me/" + number + "?text=" + encodeURIComponent(message), "_blank");
 }
 </script>
 </body>
