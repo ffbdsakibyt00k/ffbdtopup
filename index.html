@@ -89,6 +89,7 @@ margin-top:20px;
 
 <div class="form">
 <input type="text" placeholder="Enter Free Fire UID">
+<input type="text" id="playerName" placeholder="Enter Player Name">
 </div>
 
 <div class="packages">
@@ -137,7 +138,7 @@ margin-top:20px;
 <script>
 function buyNow(packageName, price) {
     let uid = document.querySelector("input").value;
-
+let playerName = document.getElementById("playerName").value;
     if(uid == ""){
         alert("Please enter your Free Fire UID");
         return;
@@ -147,6 +148,7 @@ function buyNow(packageName, price) {
 
     let message = "🔥 FFBD TOPUP Order\n\n"
 + "UID: " + uid + "\n"
++ "Player: " + playerName + "\n"    
 + "Package: " + packageName + "\n"
 + "Price: ৳" + price;
 
