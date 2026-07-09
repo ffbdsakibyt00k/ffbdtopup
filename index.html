@@ -90,6 +90,7 @@ margin-top:20px;
 <div class="form">
 <input type="text" placeholder="Enter Free Fire UID">
 <input type="text" id="playerName" placeholder="Enter Player Name">
+<input type="text" id="trxid" placeholder="Enter Transaction ID">
 </div>
 
 <div class="packages">
@@ -139,6 +140,7 @@ margin-top:20px;
 function buyNow(packageName, price) {
     let uid = document.querySelector("input").value;
 let playerName = document.getElementById("playerName").value;
+ let trxid = document.getElementById("trxid").value;   
     if(uid == ""){
         alert("Please enter your Free Fire UID");
         return;
@@ -150,6 +152,7 @@ let playerName = document.getElementById("playerName").value;
 + "UID: " + uid + "\n"
 + "Player: " + playerName + "\n"    
 + "Package: " + packageName + "\n"
++ "Transaction ID: " + trxid + "\n"
 + "Price: ৳" + price;
 
     window.open("https://wa.me/" + number + "?text=" + encodeURIComponent(message), "_blank");
