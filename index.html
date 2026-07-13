@@ -230,16 +230,19 @@ let playerName = document.getElementById("playerName").value;
     window.open("https://wa.me/" + number + "?text=" + encodeURIComponent(message), "_blank");
 }
  function showSection(section) {
+    document.getElementById("home").style.display = "none";
     document.getElementById("uid").style.display = "none";
     document.getElementById("weekly").style.display = "none";
     document.getElementById("monthly").style.display = "none";
 
-    if (section === "home") {
+    document.getElementById(section).style.display = "block";
+
+    if (section === "uid") {
         document.getElementById("uid").style.display = "grid";
-    } else {
-        document.getElementById(section).style.display = "grid";
     }
 }
+
+showSection("home");
 
 showSection("home");   
 </script>
