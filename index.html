@@ -209,12 +209,21 @@ header p{
 © 2026 FFBD TOPUP | FFBD SAKIB YT 100% Trusted✅
 </footer>
 <script>
-function buyNow(packageName, price) {
+function payNow() {
+    window.open(
+        "https://pay.chapritopup.com/checkout/t8d4ef2hoBBFd2QIx7IwDyP85N8VQnP9bQa8IwaN",
+        "_blank"
+    );
+}
+
+function confirmOrder(packageName, price) {
+
     let uid = document.querySelector("input").value;
-let playerName = document.getElementById("playerName").value;
- let trxid = document.getElementById("trxid").value;   
-    if(uid == ""){
-        alert("Please enter your Free Fire UID");
+    let playerName = document.getElementById("playerName").value;
+    let trxid = document.getElementById("trxid").value;
+
+    if (uid == "" || playerName == "" || trxid == "") {
+        alert("Please fill all fields.");
         return;
     }
 
